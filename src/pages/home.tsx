@@ -8,11 +8,14 @@ import { useLang } from "@/contexts/LanguageContext";
 import FadeIn, { StaggerContainer, StaggerItem, HoverCard } from "@/components/FadeIn";
 import SectionHeading from "@/components/SectionHeading";
 
+const imageUrl = (fileName: string) =>
+  new URL(`../assets/images/${fileName}`, import.meta.url).href;
+
 export default function Home() {
   const { t } = useLang();
 
   useEffect(() => {
-    document.title = "Home | Pandit Shri Kashi Prasad Tiwari Trust";
+    document.title = "Home | Shri K. P. Tiwari Shanti Sevadharm Public Charitable Trust";
   }, []);
 
   const activities = [
@@ -137,7 +140,7 @@ export default function Home() {
                     </Button>
                   </motion.div>
                 </Link>
-                <Link href="/contact" className="w-full sm:w-auto">
+                <Link href="/contact#support" className="w-full sm:w-auto">
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <Button size="lg" variant="outline" className="w-full sm:w-auto min-w-[160px] border-navy text-navy hover:bg-secondary/50 font-semibold cursor-pointer" data-testid="button-hero-support">
                       {t("hero.support")}
@@ -192,8 +195,8 @@ className="relative w-full max-w-sm aspect-[3/4] sm:aspect-[3/4] min-[1000px]:as
       style={{ transform: "translateZ(0px)" }}
     >
       <img
-        src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=900&q=80"
-        alt="Volunteers coming together for community service"
+        src={imageUrl("648639253_939737782093266_8898264903553191099_n.jpg")}
+        alt="Trust members during a community procession"
         className="w-full h-full object-cover scale-[1.02] hover:scale-105 transition-transform duration-700 ease-out"
         data-testid="img-hero"
       />
@@ -268,8 +271,17 @@ className="relative w-full max-w-sm aspect-[3/4] sm:aspect-[3/4] min-[1000px]:as
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <FadeIn direction="right" className="w-full lg:w-1/2">
-              <div className="aspect-[3/4] max-w-md mx-auto bg-muted rounded-lg flex items-center justify-center overflow-hidden border border-border shadow-sm">
-                <p className="text-muted-foreground font-medium">{t("about.portrait")}</p>
+              <div className="relative aspect-[3/4] max-w-md mx-auto bg-muted rounded-2xl overflow-hidden border border-border shadow-xl group">
+                <img
+                  src={imageUrl("shri-kashi-prasad-tiwari-ji.jpeg")}
+                  alt="Late Pandit Shri Kashi Prasad Tiwari Ji"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent pointer-events-none" />
+              </div>
+              <div className="text-center mt-5">
+                <h4 className="text-lg font-bold text-foreground">{t("about.founder.name")}</h4>
+                <p className="text-xs text-primary font-semibold uppercase tracking-wider">{t("about.founder.label")}</p>
               </div>
             </FadeIn>
             <FadeIn direction="left" delay={0.1} className="w-full lg:w-1/2">
@@ -282,11 +294,39 @@ className="relative w-full max-w-sm aspect-[3/4] sm:aspect-[3/4] min-[1000px]:as
       </section>
 
       {/* ── Vision & Mission ── */}
-      <section className="py-20 bg-muted border-y border-border">
+      <section className="py-24 bg-gradient-to-b from-muted/30 to-muted/80 border-y border-border">
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
-          <FadeIn direction="up" className="max-w-3xl mx-auto text-center">
-            <SectionHeading align="center" className="mb-8">{t("vision.heading")}</SectionHeading>
-            <p className="text-xl text-muted-foreground leading-relaxed">{t("vision.text")}</p>
+          <FadeIn direction="up" className="text-center mb-16">
+            <SectionHeading align="center" className="mb-4">{t("vision.heading")}</SectionHeading>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+            <FadeIn direction="right" className="h-full">
+              <div className="h-full bg-white p-8 rounded-2xl border border-border shadow-sm flex flex-col hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-navy mb-4">{t("vision.title")}</h3>
+                <p className="text-muted-foreground leading-relaxed text-base">{t("vision.desc")}</p>
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="left" delay={0.1} className="h-full">
+              <div className="h-full bg-white p-8 rounded-2xl border border-border shadow-sm flex flex-col hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                  <Heart className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold text-navy mb-4">{t("vision.mission.title")}</h3>
+                <p className="text-muted-foreground leading-relaxed text-base">{t("vision.mission.desc")}</p>
+              </div>
+            </FadeIn>
+          </div>
+
+          <FadeIn direction="up" delay={0.2} className="max-w-5xl mx-auto">
+            <div className="bg-white p-8 md:p-10 rounded-2xl border border-border shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-2xl font-bold text-navy mb-4 text-center md:text-left">{t("vision.objective.title")}</h3>
+              <p className="text-muted-foreground leading-relaxed text-base">{t("vision.objective.desc")}</p>
+            </div>
           </FadeIn>
         </div>
       </section>
@@ -322,6 +362,45 @@ className="relative w-full max-w-sm aspect-[3/4] sm:aspect-[3/4] min-[1000px]:as
               </StaggerItem>
             ))}
           </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ── Registered Office Section ── */}
+      <section className="py-24 bg-muted/30 border-t border-border">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            {/* Left side: content */}
+            <FadeIn direction="right" className="w-full lg:w-1/2">
+              <span className="inline-block text-xs md:text-sm font-bold tracking-widest uppercase text-primary bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-6">
+                {t("home.office.heading")}
+              </span>
+              <SectionHeading className="mb-6">{t("home.office.title")}</SectionHeading>
+              <p className="text-xl font-semibold text-navy mb-4 leading-relaxed">
+                {t("home.office.sub")}
+              </p>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                {t("home.office.desc")}
+              </p>
+              
+              {/* Address card */}
+              <div className="bg-white p-6 rounded-2xl border border-border shadow-sm font-mono text-sm text-muted-foreground space-y-1">
+                <p className="font-semibold text-navy font-sans text-base mb-2">{t("home.office.title")}</p>
+                <p className="whitespace-pre-line">{t("contact.address.value")}</p>
+              </div>
+            </FadeIn>
+
+            {/* Right side: image */}
+            <FadeIn direction="left" delay={0.15} className="w-full lg:w-1/2">
+              <div className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] w-full max-w-lg mx-auto bg-muted rounded-3xl overflow-hidden border border-border shadow-xl group">
+                <img
+                  src={imageUrl("basera-house-mahewa-khurd.jpeg")}
+                  alt="Basera House, Registered Office"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-transparent pointer-events-none" />
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
@@ -370,7 +449,7 @@ className="relative w-full max-w-sm aspect-[3/4] sm:aspect-[3/4] min-[1000px]:as
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <Link href="/contact">
+        <Link href="/contact#support">
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             <Button
               size="lg"

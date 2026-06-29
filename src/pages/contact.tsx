@@ -21,6 +21,9 @@ import FadeIn, { StaggerContainer, StaggerItem } from "@/components/FadeIn";
 import InnerBanner from "@/components/InnerBanner";
 import SectionHeading from "@/components/SectionHeading";
 
+const imageUrl = (fileName: string) =>
+  new URL(`../assets/images/${fileName}`, import.meta.url).href;
+
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
@@ -33,7 +36,22 @@ export default function Contact() {
   const { t } = useLang();
 
   useEffect(() => {
-    document.title = "Contact Us | Pandit Shri Kashi Prasad Tiwari Trust";
+    document.title = "Contact Us | Shri K. P. Tiwari Shanti Sevadharm Public Charitable Trust";
+
+    const handleScroll = () => {
+      if (window.location.hash === "#support") {
+        setTimeout(() => {
+          const element = document.getElementById("support");
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 150);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("hashchange", handleScroll);
+    return () => window.removeEventListener("hashchange", handleScroll);
   }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -52,7 +70,7 @@ export default function Contact() {
       icon: MapPin,
       labelKey: "contact.address",
       value: (
-        <>123 Trust Bhavan, Main Road,<br />City Name, State 123456, India<br /><span className="text-sm italic"></span></>
+        <span className="whitespace-pre-line">{t("contact.address.value")}</span>
       ),
     },
     {
@@ -104,32 +122,29 @@ export default function Contact() {
                 ))}
               </StaggerContainer>
 
+              {/* Basera House Office Photo Card */}
               <motion.div
-                className="bg-muted p-8 rounded-lg border border-border"
+                className="mb-12 overflow-hidden rounded-2xl border border-border bg-white shadow-sm hover:shadow-md transition-shadow group relative cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <h3 className="text-2xl font-bold text-foreground mb-4">{t("contact.support")}</h3>
-                <p className="text-muted-foreground mb-6">{t("contact.donate.desc")}</p>
-                <div className="space-y-4">
-                  <div>
-                    <p className="font-medium text-foreground">
-                      {t("contact.bank")} <span className="font-normal text-sm italic text-muted-foreground"></span>
-                    </p>
-                    <p className="text-sm text-muted-foreground font-mono mt-1">A/C Name: PSKPT Trust</p>
-                    <p className="text-sm text-muted-foreground font-mono">A/C No: 1234567890123</p>
-                    <p className="text-sm text-muted-foreground font-mono">IFSC: ABCD0123456</p>
-                  </div>
-                  <div className="pt-2 border-t border-border">
-                    <p className="font-medium text-foreground">
-                      UPI <span className="font-normal text-sm italic text-muted-foreground"></span>
-                    </p>
-                    <p className="text-sm text-muted-foreground font-mono mt-1">pskpt@bankname</p>
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-muted">
+                  <img
+                    src={imageUrl("basera-house-mahewa-khurd.jpeg")}
+                    alt="Basera House - Mahewa Khurd Office"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/10 to-transparent pointer-events-none" />
+                  <div className="absolute bottom-4 left-4 text-white z-10">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-0.5">Registered Office</p>
+                    <h4 className="text-lg font-bold">Basera House, Mahewa Khurd</h4>
                   </div>
                 </div>
               </motion.div>
+
+
             </FadeIn>
 
             {/* Right — enquiry form */}
@@ -213,6 +228,55 @@ export default function Contact() {
             </FadeIn>
 
           </div>
+
+          {/* Full-width Support the Trust Section */}
+          <FadeIn direction="up" delay={0.2} className="mt-20">
+            <div id="support" className="scroll-mt-28 bg-muted p-8 md:p-12 rounded-3xl border border-border shadow-sm">
+              <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+                
+                {/* Left Side: QR Code and Description */}
+                <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+                  <h3 className="text-3xl font-bold text-navy mb-4">{t("contact.support")}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-base mb-8 max-w-md">
+                    {t("contact.donate.desc")}
+                  </p>
+                  
+                  {/* QR Code container */}
+                  <div className="w-48 h-48 bg-white border border-border rounded-2xl overflow-hidden p-3 shadow-md hover:shadow-lg transition-shadow flex items-center justify-center">
+                    <img
+                      src={imageUrl("qr-code.png")}
+                      alt="Donation QR Code"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Right Side: Bank and UPI Details */}
+                <div className="w-full lg:w-1/2 space-y-6">
+                  <div>
+                    <p className="font-semibold text-foreground text-sm uppercase tracking-wider mb-3">
+                      {t("contact.bank")}
+                    </p>
+                    <div className="text-base text-muted-foreground font-mono space-y-1.5 bg-white p-6 rounded-2xl border border-border shadow-sm">
+                      <p><span className="font-semibold text-navy">Name:</span> PSKPT Trust</p>
+                      <p><span className="font-semibold text-navy">Account No:</span> 1234567890123</p>
+                      <p><span className="font-semibold text-navy">IFSC Code:</span> ABCD0123456</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground text-sm uppercase tracking-wider mb-3">
+                      UPI Transfer
+                    </p>
+                    <div className="text-base text-muted-foreground font-mono bg-white p-6 rounded-2xl border border-border shadow-sm">
+                      <p><span className="font-semibold text-navy">UPI ID:</span> pskpt@bankname</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </FadeIn>
+
         </div>
       </section>
     </div>

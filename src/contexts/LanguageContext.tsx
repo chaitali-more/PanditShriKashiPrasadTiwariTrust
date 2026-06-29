@@ -17,14 +17,19 @@ const translations: Record<string, Record<Lang, string>> = {
   "nav.contact": { en: "Contact Us", hi: "संपर्क करें" },
   "nav.support": { en: "Support the Trust", hi: "ट्रस्ट का समर्थन करें" },
 
+  // Trust Name
+  "trust.name.part1": { en: "Shri K. P. Tiwari", hi: "श्री के. पी. तिवारी" },
+  "trust.name.part2": { en: "Shanti Sevadharm Public Charitable Trust", hi: "शांति सेवाधर्म सार्वजनिक धर्मार्थ ट्रस्ट" },
+  "trust.name.full": { en: "Shri K. P. Tiwari Shanti Sevadharm Public Charitable Trust", hi: "श्री के. पी. तिवारी शांति सेवाधर्म सार्वजनिक धर्मार्थ ट्रस्ट" },
+
   // Hero
   "hero.badge": { en: "Public Charitable Trust", hi: "सार्वजनिक धर्मार्थ ट्रस्ट" },
   "hero.headline1": { en: "A Legacy of", hi: "एक विरासत" },
   "hero.headline2": { en: "Service", hi: "सेवा" },
   "hero.headline3": { en: "and Compassion", hi: "और करुणा की" },
   "hero.sub": {
-    en: "Dedicated to the noble philosophy of Pandit Shri Kashi Prasad Tiwari Ji — helping others, standing by people in every circumstance, and bringing positive change to society.",
-    hi: "पं॰ श्री काशी प्रसाद तिवारी जी के महान दर्शन को समर्पित — दूसरों की मदद करना, हर परिस्थिति में लोगों के साथ खड़े रहना और समाज में सकारात्मक बदलाव लाना।"
+    en: "Your support can bring smiles, education, healthcare, religious service, and dignity into someone's life. Every contribution is precious.",
+    hi: "आपका सहयोग किसी के जीवन में मुस्कान, शिक्षा, स्वास्थ्य , धार्मिक सेवा और सम्मान का कारण बन सकता है। हर सहयोग अनमोल है।"
   },
   "hero.contact": { en: "Contact Us", hi: "संपर्क करें" },
   "hero.support": { en: "Support the Trust", hi: "ट्रस्ट का समर्थन करें" },
@@ -40,35 +45,46 @@ const translations: Record<string, Record<Lang, string>> = {
   "hero.stat3.val": { en: "100%", hi: "100%" },
   "hero.stat3.lbl": { en: "Charitable Trust", hi: "धर्मार्थ ट्रस्ट" },
 
-  // Intro quote
+  // Intro quote (About the Trust - Short description on home page)
   "intro.quote": {
-    en: "\"Our trust was established in the memory of, and dedicated to the great ideals of, our revered father Pandit Shri Kashi Prasad Tiwari. Our aim is to uphold and propagate his noble philosophy for future generations.\"",
-    hi: "\"हमारे ट्रस्ट की स्थापना हमारे पूज्य पिताजी पं॰ श्री काशी प्रसाद तिवारी की स्मृति और उनके महान आदर्शों को समर्पित है। हमारा उद्देश्य उनके नाम और उनकी प्रेरणादायक सोच को सदा के लिए जीवित रखना है, ताकि उनकी विरासत आने वाली पीढ़ियों को भी प्रेरित करती रहे।\""
+    en: "Our trust has been established in loving memory of our revered father, Late Pandit Shri Kashi Prasad Tiwari Ji, and is dedicated to preserving his ideals and values. Our mission is to keep his inspiring vision alive forever so that his legacy continues to motivate future generations.",
+    hi: "हमारे ट्रस्ट की स्थापना हमारे पूज्य पिताजी पं॰ श्री काशी प्रसाद तिवारी की स्मृति और उनके आदर्शों को समर्पित है। हमारा उद्देश्य उनके नाम और उनकी प्रेरणादायक सोच को सदा के लिए जीवित रखना है, ताकि उनकी विरासत आने वाली पीढ़ियों को भी प्रेरित करती रहे।"
   },
 
-  // Founder's Legacy
-  "founder.heading": { en: "Founder's Legacy", hi: "संस्थापक की विरासत" },
+  // Founder's Legacy / Life & Philosophy
+  "founder.heading": { en: "Life & Philosophy", hi: "व्यक्तित्व एवं जीवन दर्शन" },
   "founder.p1": {
-    en: "Pandit Shri Kashi Prasad Tiwari was a person whose thinking always centered on helping others, engaging in charitable work, and treating everyone with equal respect. His life was a testament to the power of quiet, consistent service.",
-    hi: "पं॰ श्री काशी प्रसाद तिवारी एक ऐसे व्यक्ति थे जिनकी सोच हमेशा दूसरों की मदद करने, धर्मार्थ कार्यों में संलग्न रहने और सभी को समान भाव से देखने पर केंद्रित थी।"
+    en: "Late Pandit Shri Kashi Prasad Tiwari Ji embodied compassion, selfless service, and social harmony. His entire life was devoted to the welfare of others, charitable activities, and treating every individual with equality and respect.",
+    hi: "पंडित श्री काशी प्रसाद तिवारी जी का जीवन परोपकार, करुणा और समरसता की एक प्रतिमूर्ति था। उनका संपूर्ण जीवन दूसरों के कल्याण, धर्मार्थ कार्यों के प्रति समर्पण और समाज के हर व्यक्ति को समान दृष्टिकोण से देखने की सोच से प्रेरित था।"
   },
   "founder.p2": {
-    en: "He believed that we should always encourage people, stand by them in every circumstance, and bring positive change to society through various philanthropic efforts, including financial assistance, social aid, and humanitarian service.",
-    hi: "उनका मानना था कि हमें हमेशा लोगों को प्रोत्साहित करना चाहिए, किसी भी परिस्थिति में उनके साथ खड़ा रहना चाहिए और आर्थिक सहायता सहित विभिन्न परोपकारी कार्यों के माध्यम से समाज में सकारात्मक बदलाव लाना चाहिए।"
+    en: "He firmly believed that, \"True wealth is what we dedicate to the well-being of others.\" Whether it was supporting a neighbor during financial hardship, offering emotional strength in times of personal crisis, or standing up for the most vulnerable and voiceless members of society, he was always among the first to help.",
+    hi: "उनका दृढ़ विश्वास था कि 'सच्चा धन वही है जो हम दूसरों की भलाई में लगा देते हैं।' चाहे आर्थिक तंगी में किसी पड़ोसी का संबल बनना हो, व्यक्तिगत संकट में किसी को नैतिक ढांढस बंधाना हो, या समाज के सबसे कमजोर और मूक वर्ग की आवाज बनना हो—वे हमेशा अग्रिम पंक्ति में खड़े मिलते थे।"
   },
 
   // Vision & Mission
-  "vision.heading": { en: "Vision & Mission", hi: "दृष्टि और मिशन" },
-  "vision.text": {
-    en: "The primary objective of our trust is to realize the philanthropic philosophy of Pandit Shri Kashi Prasad Tiwari Ji. We are committed to providing social support, carrying out charitable work, promoting equality and encouragement, undertaking humanitarian service, and improving access to education and health.",
-    hi: "हमारे ट्रस्ट का मुख्य उद्देश्य पं॰ श्री काशी प्रसाद तिवारी जी के परोपकारी दर्शन को साकार करना है। हम सामाजिक सहायता प्रदान करने, धर्मार्थ कार्य करने, समानता और प्रोत्साहन को बढ़ावा देने, मानवीय सेवा करने और शिक्षा व स्वास्थ्य तक पहुंच सुधारने के लिए प्रतिबद्ध हैं।"
+  "vision.heading": { en: "Our Vision & Mission", hi: "लक्ष्य और ध्येय" },
+  "vision.title": { en: "Our Vision", hi: "हमारा दृष्टिकोण (Vision)" },
+  "vision.desc": {
+    en: "To build an inclusive, educated, and healthy society inspired by the humanitarian ideals of Late Pandit Shri Kashi Prasad Tiwari Ji.",
+    hi: "पंडित श्री काशी प्रसाद तिवारी जी के परोपकारी आदर्शों के अनुरूप एक समान, शिक्षित और स्वस्थ समाज का निर्माण करना।"
+  },
+  "vision.mission.title": { en: "Our Mission", hi: "हमारा लक्ष्य (Mission)" },
+  "vision.mission.desc": {
+    en: "To uplift every section of society through continuous social welfare initiatives, charitable services, and improved access to quality education and healthcare.",
+    hi: "निरंतर सामाजिक सहायता, धर्मार्थ कार्यों के संचालन और स्वास्थ्य-शिक्षा की सुगम पहुंच के माध्यम से हर वर्ग का उत्थान करना।"
+  },
+  "vision.objective.title": { en: "Primary Objective", hi: "मुख्य उद्देश्य" },
+  "vision.objective.desc": {
+    en: "Our primary objective is to transform the philanthropic vision of Late Pandit Shri Kashi Prasad Tiwari Ji into meaningful action. We are committed to providing social assistance, carrying out charitable and religious activities, promoting equality and empowerment, serving humanity, and ensuring accessible education and healthcare for all.",
+    hi: "हमारे ट्रस्ट का मुख्य उद्देश्य पंडित श्री काशी प्रसाद तिवारी जी के परोपकारी सोच को साकार करना है। हम सामाजिक सहायता प्रदान करने, धर्मार्थ कार्यों के संचालन, समानता एवं प्रोत्साहन को बढ़ावा देने, मानव सेवा करने तथा शिक्षा व स्वास्थ्य तक पहुंच को सुगम बनाने के लिए पूर्णतः प्रतिबद्ध हैं।"
   },
 
-  // Activities Overview
-  "activities.heading": { en: "Our Activities", hi: "हमारी गतिविधियाँ" },
+  // Activities Overview / Our Services
+  "activities.heading": { en: "Our Services", hi: "हमारे सेवा कार्य" },
   "activities.sub": {
-    en: "Discover the various areas where we are actively working to make a positive impact in our community.",
-    hi: "उन विभिन्न क्षेत्रों की खोज करें जहाँ हम अपने समुदाय में सकारात्मक प्रभाव डालने के लिए सक्रिय रूप से कार्य कर रहे हैं।"
+    en: "Explore the key areas where we continuously work to create a positive and lasting impact on society.",
+    hi: "जानिए उन प्रमुख क्षेत्रों के बारे में, जहाँ हम समाज में सकारात्मक बदलाव लाने के लिए लगातार काम कर रहे हैं।"
   },
   "act.social": { en: "Social Aid", hi: "सामाजिक सहायता" },
   "act.social.desc": { en: "Financial and moral assistance to those in need.", hi: "जरूरतमंदों को आर्थिक और नैतिक सहायता।" },
@@ -79,14 +95,23 @@ const translations: Record<string, Record<Lang, string>> = {
   "act.disaster": { en: "Disaster Relief", hi: "आपदा राहत" },
   "act.disaster.desc": { en: "Standing by people in times of crisis.", hi: "संकट के समय लोगों के साथ खड़े रहना।" },
 
-  // CTA
-  "cta.heading": { en: "Join Us in Our Mission", hi: "हमारे मिशन में शामिल हों" },
+  // CTA / Join Our Mission
+  "cta.heading": { en: "Join Our Mission", hi: "जुड़ें हमारे अभियान से" },
   "cta.sub": {
-    en: "Your support helps us continue the legacy of service. Whether through volunteering or donations, every contribution makes a difference.",
-    hi: "आपका सहयोग हमें सेवा की विरासत को जारी रखने में मदद करता है। स्वयंसेवा हो या दान — हर योगदान महत्वपूर्ण है।"
+    en: "Even the smallest act of kindness empowers us to carry forward this invaluable legacy of service. Whether through volunteering your time or making a financial contribution, every helping hand makes a meaningful difference.",
+    hi: "आपका एक छोटा सा सहयोग भी हमें सेवा की इस अनमोल विरासत को आगे बढ़ाने की शक्ति देता है। चाहे समयदान (स्वयंसेवा) हो या आर्थिक योगदान — आपका हर हाथ हमारे लिए महत्वपूर्ण है।"
   },
   "cta.donate": { en: "Make a Donation", hi: "दान करें" },
   "cta.learn": { en: "Learn More", hi: "और जानें" },
+
+  // Home Registered Office Section
+  "home.office.heading": { en: "Registered Office", hi: "पंजीकृत कार्यालय" },
+  "home.office.title": { en: "Basera House", hi: "बसेरा हाउस" },
+  "home.office.sub": { en: "The central hub of our trust's welfare activities and operations.", hi: "हमारे ट्रस्ट की कल्याणकारी गतिविधियों और संचालन का केंद्रीय केंद्र।" },
+  "home.office.desc": {
+    en: "Located in Prayagraj, Basera House is the registered headquarters of the Shri K. P. Tiwari Shanti Sevadharm Public Charitable Trust. It is here that we coordinate our community outreach, scholarship programs, and service initiatives to carry forward the legacy of compassion.",
+    hi: "प्रयागराज में स्थित, बसेरा हाउस श्री के. पी. तिवारी शांति सेवाधर्म सार्वजनिक धर्मार्थ ट्रस्ट का पंजीकृत मुख्यालय है। यह वह स्थान है जहां से हम करुणा की विरासत को आगे बढ़ाने के लिए अपने सामाजिक कार्यक्रमों, छात्रवृत्ति वितरण और सेवा पहलों का समन्वय करते हैं।"
+  },
 
   // About page
   "about.title": { en: "About Us", hi: "हमारे बारे में" },
@@ -94,29 +119,30 @@ const translations: Record<string, Record<Lang, string>> = {
     en: "Continuing a legacy of service, compassion, and unwavering support for the community.",
     hi: "सेवा, करुणा और समुदाय के प्रति अटूट समर्थन की विरासत को आगे बढ़ाना।"
   },
-  "about.bio.heading": { en: "His Character & Philosophy", hi: "उनका चरित्र और दर्शन" },
+  "about.bio.heading": { en: "Life & Philosophy", hi: "व्यक्तित्व एवं जीवन दर्शन" },
   "about.bio.p1": {
-    en: "Pandit Shri Kashi Prasad Tiwari was a person whose thinking always centered on helping others, engaging in charitable work, and treating everyone with equal respect. His life was a testament to the power of quiet, consistent service.",
-    hi: "पं॰ श्री काशी प्रसाद तिवारी एक ऐसे व्यक्ति थे जिनकी सोच हमेशा दूसरों की मदद करने, धर्मार्थ कार्यों में संलग्न रहने और सभी को समान भाव से देखने पर केंद्रित थी।"
+    en: "Late Pandit Shri Kashi Prasad Tiwari Ji embodied compassion, selfless service, and social harmony. His entire life was devoted to the welfare of others, charitable activities, and treating every individual with equality and respect.",
+    hi: "पंडित श्री काशी प्रसाद तिवारी जी का जीवन परोपकार, करुणा और समरसता की एक प्रतिमूर्ति था। उनका संपूर्ण जीवन दूसरों के कल्याण, धर्मार्थ कार्यों के प्रति समर्पण और समाज के हर व्यक्ति को समान दृष्टिकोण से देखने की सोच से प्रेरित था।"
   },
   "about.bio.p2": {
-    en: "He believed that true wealth lies in what we give to others. Whether it was standing by a neighbor in times of financial distress, providing moral support during personal crises, or advocating for those without a voice, he was always present.",
-    hi: "उनका मानना था कि सच्चा धन वही है जो हम दूसरों को देते हैं। चाहे आर्थिक संकट में पड़ोसी के साथ खड़े रहना हो, व्यक्तिगत संकट में नैतिक समर्थन देना हो या बिना आवाज़ वालों की वकालत करना हो — वे हमेशा उपस्थित रहते थे।"
+    en: "He firmly believed that, \"True wealth is what we dedicate to the well-being of others.\" Whether it was supporting a neighbor during financial hardship, offering emotional strength in times of personal crisis, or standing up for the most vulnerable and voiceless members of society, he was always among the first to help.",
+    hi: "उनका दृढ़ विश्वास था कि 'सच्चा धन वही है जो हम दूसरों की भलाई में लगा देते हैं।' चाहे आर्थिक तंगी में किसी पड़ोसी का संबल बनना हो, व्यक्तिगत संकट में किसी को नैतिक ढांढस बंधाना हो, या समाज के सबसे कमजोर और मूक वर्ग की आवाज बनना हो—वे हमेशा अग्रिम पंक्ति में खड़े मिलते थे।"
   },
-  "about.why.heading": { en: "Why the Trust Was Established", hi: "ट्रस्ट की स्थापना क्यों हुई" },
+  "about.why.heading": { en: "Purpose of Establishing the Trust", hi: "ट्रस्ट की स्थापना का उद्देश्य" },
   "about.why.p": {
-    en: "The trust was founded by his family to ensure that his legacy of compassion does not fade. Our founding motivation is simple: to continue his work and inspire future generations to adopt a life of service. By institutionalizing his philosophy, we aim to reach more people and create sustainable, long-term impact.",
-    hi: "ट्रस्ट की स्थापना उनके परिवार ने इसलिए की ताकि उनकी करुणा की विरासत फीकी न पड़े। हमारी स्थापना का उद्देश्य सरल है: उनके कार्य को आगे बढ़ाना और आने वाली पीढ़ियों को सेवा के जीवन के लिए प्रेरित करना।"
+    en: "This trust was founded by the family of Late Pandit Shri Kashi Prasad Tiwari Ji to ensure that his legacy of compassion, selfless service, and kindness continues to inspire generations to come. Our goal is simple—to carry forward the welfare initiatives he began and to inspire young people to embrace the spirit of community service.",
+    hi: "पंडित जी की सेवा भावना और करुणा की विरासत कभी फीकी न पड़े, इसी पावन उद्देश्य के साथ उनके परिवार द्वारा इस ट्रस्ट की स्थापना की गई है। हमारा लक्ष्य बहुत सरल है—उनके द्वारा शुरू किए गए कल्याणकारी कार्यों को निरंतर आगे बढ़ना और युवा पीढ़ी में समाज सेवा के प्रति एक नई अलख जगाना।"
   },
-  "about.founder.label": { en: "Founder & Inspiration", hi: "संस्थापक और प्रेरणास्रोत" },
+  "about.founder.name": { en: "Late. Pt. Shri Kashi Prasad Tiwari Ji", hi: "Late. Pt. Shri Kashi Prasad Tiwari Ji" },
+  "about.founder.label": { en: "Our Guiding Inspiration", hi: "प्रेरणास्रोत" },
   "about.photo": { en: "Photo Placeholder", hi: "फोटो स्थान" },
   "about.portrait": { en: "Portrait Placeholder", hi: "चित्र स्थान" },
 
   // Objectives
-  "obj.heading": { en: "Trust Objectives", hi: "ट्रस्ट के उद्देश्य" },
+  "obj.heading": { en: "Core Objectives of the Trust", hi: "ट्रस्ट के मुख्य उद्देश्य" },
   "obj.sub": {
-    en: "We are committed to translating philosophy into action through these five core pillars.",
-    hi: "हम इन पाँच मूल स्तंभों के माध्यम से दर्शन को कार्रवाई में बदलने के लिए प्रतिबद्ध हैं।"
+    en: "Inspired by the humanitarian ideals and principles of Late Pandit Shri Kashi Prasad Tiwari Ji, we are committed to working through five fundamental pillars to create lasting social impact.",
+    hi: "पंडित जी के परोपकारी विचारों और सिद्धांतों को धरातल पर उतारने के लिए हम इन पाँच मूल स्तंभों (लक्ष्यों) के माध्यम से कार्य करने के लिए पूर्णतः संकल्पित हैं।"
   },
   "obj.1.title": { en: "Social Support", hi: "सामाजिक सहायता" },
   "obj.1.desc": {
@@ -144,8 +170,16 @@ const translations: Record<string, Record<Lang, string>> = {
     hi: "शिक्षा, स्वास्थ्य और अन्य मूलभूत आवश्यकताओं तक पहुंच में सुधार के लिए पहल करना।"
   },
 
-  // Trustees
-  "trustees.heading": { en: "Board of Trustees", hi: "न्यासी मंडल" },
+  // Trustees / Leadership
+  "trustees.heading": { en: "Leadership", hi: "नेतृत्व" },
+  "trustees.chairman.name": { en: "Mr. Sachchida Nand Tiwari", hi: "Mr. Sachchida Nand Tiwari" },
+  "trustees.chairman.role": { en: "Chairman", hi: "Chairman" },
+  "trustees.secretary.name": { en: "Mr. Gyan Chandra Dubey", hi: "Mr. Gyan Chandra Dubey" },
+  "trustees.secretary.role": { en: "Secretary", hi: "Secretary" },
+  "trustees.member1.name": { en: "Mrs. Neelam Krishna Nand Tiwari", hi: "Mrs. Neelam Krishna Nand Tiwari" },
+  "trustees.member1.role": { en: "Member", hi: "Member" },
+  "trustees.member2.name": { en: "Mr. Krishna Nand Tiwari", hi: "Mr. Krishna Nand Tiwari" },
+  "trustees.member2.role": { en: "Member", hi: "Member" },
 
   // Activities page
   "act.page.title": { en: "Activities", hi: "गतिविधियाँ" },
@@ -171,12 +205,15 @@ const translations: Record<string, Record<Lang, string>> = {
 
   // Footer
   "footer.tagline": {
-    en: "A charitable trust rooted in Indian values of service and compassion, dedicated to the noble philosophy of helping others and bringing positive change to society.",
-    hi: "सेवा और करुणा के भारतीय मूल्यों में निहित एक धर्मार्थ ट्रस्ट, जो दूसरों की मदद करने और समाज में सकारात्मक बदलाव लाने के महान दर्शन को समर्पित है।"
+    en: "A charitable trust founded on the values of compassion, humanity, and the rich Indian tradition of selfless service, dedicated to promoting public welfare and creating positive social change.",
+    hi: "मानवीय संवेदनाओं और भारतीय सेवा संस्कारों पर आधारित एक धर्मार्थ ट्रस्ट, जो लोक-कल्याण के आदर्शों को साकार करने तथा समाज में सकारात्मक परिवर्तन लाने के लिए पूर्णतः समर्पित है।"
   },
   "footer.quicklinks": { en: "Quick Links", hi: "त्वरित लिंक" },
   "footer.contact": { en: "Contact", hi: "संपर्क" },
-  "footer.copyright": { en: "Pandit Shri Kashi Prasad Tiwari Trust. All rights reserved.", hi: "पं॰ श्री काशी प्रसाद तिवारी ट्रस्ट। सर्वाधिकार सुरक्षित।" },
+  "footer.copyright": {
+    en: "Shri K. P. Tiwari Shanti Sevadharm Public Charitable Trust. All rights reserved.",
+    hi: "श्री के. पी. तिवारी शांति सेवाधर्म सार्वजनिक धर्मार्थ ट्रस्ट। सर्वाधिकार सुरक्षित।"
+  },
 
   // Contact page
   "contact.title": { en: "Contact Us", hi: "संपर्क करें" },
@@ -186,14 +223,18 @@ const translations: Record<string, Record<Lang, string>> = {
   },
   "contact.getintouch": { en: "Get in Touch", hi: "संपर्क करें" },
   "contact.address": { en: "Address", hi: "पता" },
+  "contact.address.value": {
+    en: "Basera House\nVillage: Mahewa Khurd\nPost: Nahwai\nDistrict: Prayagraj, Uttar Pradesh - 212104\nIndia",
+    hi: "बसेरा हाउस\nग्राम: महेवा खुर्द\nपोस्ट: नहवाई\nजिला: प्रयागराज, उत्तर प्रदेश - 212104\nभारत"
+  },
   "contact.phone": { en: "Phone", hi: "फ़ोन" },
   "contact.email": { en: "Email", hi: "ईमेल" },
   "contact.hours": { en: "Office Hours", hi: "कार्यालय समय" },
   "contact.hours.value": { en: "Mon - Sat: 10:00 AM - 5:00 PM", hi: "सोम - शनि: सुबह 10:00 - शाम 5:00" },
   "contact.support": { en: "Support the Trust", hi: "ट्रस्ट का समर्थन करें" },
   "contact.donate.desc": {
-    en: "Your donations help us provide education, health care, and social support to those in need. Every contribution counts.",
-    hi: "आपके दान से हम जरूरतमंदों को शिक्षा, स्वास्थ्य सेवा और सामाजिक सहायता प्रदान करते हैं। हर योगदान महत्वपूर्ण है।"
+    en: "Your contribution strengthens our journey of service. Support our mission to promote education, healthcare, and social welfare by making your valuable donation.",
+    hi: "आपका सहयोग हमारी सेवा यात्रा को आगे बढ़ाता है। शिक्षा, स्वास्थ्य एवं सामाजिक सहायता के इस अभियान में अपना अमूल्य योगदान दें।"
   },
   "contact.bank": { en: "Bank Transfer", hi: "बैंक ट्रांसफर" },
   "contact.enquiry": { en: "Send an Enquiry", hi: "पूछताछ भेजें" },

@@ -72,7 +72,7 @@ export default function Gallery() {
   const { t } = useLang();
 
   useEffect(() => {
-    document.title = "Gallery | Pandit Shri Kashi Prasad Tiwari Trust";
+    document.title = "Gallery | Shri K. P. Tiwari Shanti Sevadharm Public Charitable Trust";
   }, []);
 
   const activeImage = selectedImage === null ? null : galleryImages[selectedImage];

@@ -1,4 +1,4 @@
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import { useEffect, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -36,10 +36,10 @@ function LoadingScreen() {
 
         <div className="mt-6 space-y-2">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
-            Shri Kashi Prasad Tiwari
+            Shri K. P. Tiwari
           </p>
           <p className="text-base font-bold text-navy sm:text-lg">
-            Shanti Sevadharm Charitable Trust
+            Shanti Sevadharm Public Charitable Trust
           </p>
         </div>
 
@@ -51,9 +51,22 @@ function LoadingScreen() {
   );
 }
 
+function ScrollToTop() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
+  return null;
+}
+
 function Router() {
   return (
     <div className="flex flex-col min-h-screen">
+      <ScrollToTop />
       <ScrollProgressBar />
       <Header />
       <main className="flex-grow">

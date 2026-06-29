@@ -7,11 +7,14 @@ import FadeIn, { StaggerContainer, StaggerItem, HoverCard } from "@/components/F
 import InnerBanner from "@/components/InnerBanner";
 import SectionHeading from "@/components/SectionHeading";
 
+const imageUrl = (fileName: string) =>
+  new URL(`../assets/images/${fileName}`, import.meta.url).href;
+
 export default function About() {
   const { t } = useLang();
 
   useEffect(() => {
-    document.title = "About Us | Pandit Shri Kashi Prasad Tiwari Trust";
+    document.title = "About Us | Shri K. P. Tiwari Shanti Sevadharm Public Charitable Trust";
   }, []);
 
   const objectives = [
@@ -22,10 +25,28 @@ export default function About() {
     { titleKey: "obj.5.title", descKey: "obj.5.desc", icon: GraduationCap },
   ];
 
-  const trustees = Array(4).fill(null).map((_, i) => ({
-    name: `Trustee Name ${i + 1}`,
-    designation: i === 0 ? "Chairman" : i === 1 ? "Secretary" : "Member",
-  }));
+  const trustees = [
+    {
+      nameKey: "trustees.chairman.name",
+      designationKey: "trustees.chairman.role",
+      image: "sachchida-nand-tiwari.jpeg",
+    },
+    {
+      nameKey: "trustees.secretary.name",
+      designationKey: "trustees.secretary.role",
+      image: "ghanshyam-chandra-tiwari.jpeg",
+    },
+    {
+      nameKey: "trustees.member1.name",
+      designationKey: "trustees.member1.role",
+      image: "neelam-krishna-nand-tiwari.jpeg",
+    },
+    {
+      nameKey: "trustees.member2.name",
+      designationKey: "trustees.member2.role",
+      image: "krishna-nand-tiwari.jpeg",
+    },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -36,11 +57,16 @@ export default function About() {
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <FadeIn direction="right" className="w-full lg:w-1/3">
-              <div className="aspect-[3/4] bg-muted rounded-lg flex items-center justify-center border border-border shadow-sm">
-                <p className="text-muted-foreground font-medium">{t("about.photo")}</p>
+              <div className="relative aspect-[3/4] bg-muted rounded-2xl overflow-hidden border border-border shadow-md group">
+                <img
+                  src={imageUrl("shri-kashi-prasad-tiwari-ji.jpeg")}
+                  alt="Late Pandit Shri Kashi Prasad Tiwari Ji"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent pointer-events-none" />
               </div>
               <div className="text-center mt-6">
-                <h3 className="text-xl font-bold text-foreground">Pandit Shri Kashi Prasad Tiwari Ji</h3>
+                <h3 className="text-xl font-bold text-foreground">{t("about.founder.name")}</h3>
                 <p className="text-muted-foreground text-sm uppercase tracking-wider mt-1">{t("about.founder.label")}</p>
               </div>
             </FadeIn>
@@ -106,14 +132,18 @@ export default function About() {
               <StaggerItem key={i}>
                 <div className="flex flex-col items-center text-center">
                   <motion.div
-                    className="w-48 h-48 rounded-full bg-muted flex items-center justify-center mb-6 border border-border overflow-hidden"
+                    className="w-48 h-48 rounded-full bg-muted flex items-center justify-center mb-6 border border-border overflow-hidden shadow-md group relative"
                     whileHover={{ scale: 1.05, borderColor: "hsl(32 92% 48%)" }}
                     transition={{ duration: 0.2 }}
                   >
-                    <span className="text-sm text-muted-foreground px-4 text-center">{t("about.photo")}</span>
+                    <img
+                      src={imageUrl(trustee.image)}
+                      alt={t(trustee.nameKey)}
+                      className="w-full h-full object-cover"
+                    />
                   </motion.div>
-                  <h4 className="text-lg font-bold text-foreground">{trustee.name}</h4>
-                  <p className="text-primary text-sm font-medium mt-1 uppercase tracking-wider">{trustee.designation}</p>
+                  <h4 className="text-lg font-bold text-foreground">{t(trustee.nameKey)}</h4>
+                  <p className="text-primary text-sm font-semibold mt-1 uppercase tracking-wider">{t(trustee.designationKey)}</p>
                 </div>
               </StaggerItem>
             ))}

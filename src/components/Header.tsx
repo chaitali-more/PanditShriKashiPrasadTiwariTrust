@@ -49,10 +49,10 @@ export default function Header() {
             />
             <div className="hidden sm:flex flex-col leading-tight">
               <span className="font-bold text-base text-navy" data-testid="text-logo-name">
-                Shri Kashi Prasad Tiwari
+                Shri K. P. Tiwari
               </span>
               <span className="text-xs font-medium text-primary tracking-wide">
-                Shanti Sevadharm Charitable Trust
+                Shanti Sevadharm Public Charitable Trust
               </span>
             </div>
           </Link>
@@ -81,7 +81,7 @@ export default function Header() {
               <span className="text-muted-foreground/50">|</span>
               <span className={lang === "hi" ? "text-primary" : "text-muted-foreground"}>हि</span>
             </button>
-            <Link href="/contact">
+            <Link href="/contact#support">
               <Button size="sm" className="ml-1 bg-primary hover:bg-primary/90 text-white" data-testid="button-nav-support">
                 {t("nav.support")}
               </Button>
@@ -142,7 +142,7 @@ export default function Header() {
                 <div className="flex items-center gap-2.5">
                   <img src="/logo.png" alt="Trust logo" className="h-10 w-10 object-contain" />
                   <span className="font-bold text-sm text-navy leading-tight">
-                    Shri Kashi Prasad<br />Tiwari Trust
+                    Shri K. P. Tiwari<br />Trust
                   </span>
                 </div>
                 <motion.button
@@ -188,7 +188,7 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.28 }}
               >
-                <Link href="/contact">
+                <Link href="/contact#support">
                   <Button
                     className="w-full bg-primary hover:bg-primary/90 text-white gap-2"
                     size="lg"

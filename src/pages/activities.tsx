@@ -10,7 +10,7 @@ export default function Activities() {
   const { t } = useLang();
 
   useEffect(() => {
-    document.title = "Activities | Pandit Shri Kashi Prasad Tiwari Trust";
+    document.title = "Activities | Shri K. P. Tiwari Shanti Sevadharm Public Charitable Trust";
   }, []);
 
   const initiatives = [

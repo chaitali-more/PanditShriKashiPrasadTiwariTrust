@@ -12,15 +12,6 @@ export default function Footer() {
     { href: "/contact",    labelKey: "nav.contact" },
   ];
 
-  const sitemap = [
-    { href: "/",           label: "Home" },
-    { href: "/about",      label: "About Us" },
-    { href: "/activities", label: "Activities" },
-    { href: "/gallery",    label: "Gallery" },
-    { href: "/contact",    label: "Contact Us" },
-    { href: "/contact",    label: "Donate / Support" },
-  ];
-
   return (
     <footer className="bg-foreground text-background">
       {/* Main footer grid */}
@@ -32,8 +23,8 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-5">
               <img src="/logo.png" alt="Trust logo" className="h-12 w-12 object-contain" />
               <div className="leading-tight">
-                <p className="font-bold text-sm text-white">Shri Kashi Prasad Tiwari</p>
-                <p className="text-xs text-primary">Shanti Sevadharm Charitable Trust</p>
+                <p className="font-bold text-sm text-white">Shri K. P. Tiwari</p>
+                <p className="text-xs text-primary">Shanti Sevadharm Public Charitable Trust</p>
               </div>
             </div>
             <p className="text-sm text-white/60 leading-relaxed">
@@ -67,7 +58,7 @@ export default function Footer() {
             <address className="not-italic text-sm text-white/70 space-y-2.5 leading-relaxed">
               <p>contact@pskpttrust.org <span className="text-white/30 italic text-xs"></span></p>
               <p>+91 98765 43210 <span className="text-white/30 italic text-xs"></span></p>
-              <p>123 Trust Bhavan, Main Road,<br />City, State 123456, India <span className="text-white/30 italic text-xs"></span></p>
+              <p className="whitespace-pre-line">{t("contact.address.value")}</p>
             </address>
           </div>
 
@@ -90,7 +81,14 @@ export default function Footer() {
           {/* Design credit */}
           <p className="text-sm text-white/40 shrink-0">
             Website designed by{" "}
-            <span className="text-primary font-semibold tracking-wide">Studio Varn</span>
+            <a
+              href="http://studiovarn.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-semibold tracking-wide hover:underline transition-all"
+            >
+              Studio Varn
+            </a>
           </p>
 
         </div>
